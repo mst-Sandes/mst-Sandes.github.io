@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+
+    <header>
+
+        <h1>Recursos Multimídia</h1>
+
+    </header>
+
+    <main>
+
+        <!-- BLOCO 1 -->
+
+        <figure>
+
+            <video
+                controls
+                width="800"
+                height="450"
+                poster="poster-aula.jpg"
+                preload="metadata">
+
+                <source src="video/aula.mp4" type="video/mp4">
+
+                <source src="video/aula.webm" type="video/webm">
+
+                <track
+                    src="legendas/aula-html.vtt"
+                    kind="subtitles"
+                    srclang="pt"
+                    label="Português"
+                    default>
+
+                <p>
+                    Seu navegador não suporta vídeo.
+                    <a href="video/aula.mp4">
+                        Baixar vídeo
+                    </a>
+                </p>
+
+            </video>
+
+            <figcaption>
+                [DESCRIÇÃO DO VÍDEO + FONTE]
+            </figcaption>
+
+        </figure>
+
+        <!-- BLOCO 2 -->
+
+        <figure>
+
+            <audio controls preload="metadata">
+
+                <source src="audio/episodio.mp3" type="audio/mpeg">
+
+                <source src="audio/episodio.ogg" type="audio/ogg">
+
+                <p>
+                    Seu navegador não suporta áudio.
+                    <a href="audio/episodio.mp3">
+                        Baixar áudio
+                    </a>
+                </p>
+
+            </audio>
+
+            <figcaption>
+                [TÍTULO DO EPISÓDIO]
+                —
+                <a href="transcricao.html">
+                    Ler transcrição
+                </a>
+            </figcaption>
+
+        </figure>
+
+        <!-- BLOCO 3 -->
+
+        <figure>
+
+            <iframe
+                width="800"
+                height="450"
+                src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
+                title="[TÍTULO DO VÍDEO]"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+
+            </iframe>
+
+            <figcaption>
+                [NOME DO VÍDEO] —
+                Canal [NOME DO CANAL] no YouTube
+            </figcaption>
+
+        </figure>
+
+        <!-- BLOCO 4 -->
+
+        <figure>
+
+            <picture>
+
+                <source
+                    media="(min-width: 768px)"
+                    srcset="img/banner-wide.jpg">
+
+                <img
+                    src="img/banner-mobile.jpg"
+                    alt="[DESCRIÇÃO DA IMAGEM]"
+                    width="800"
+                    height="450">
+
+            </picture>
+
+            <figcaption>
+                [DESCRIÇÃO DA IMAGEM]
+            </figcaption>
+
+        </figure>
+
+    </main>
+
+    <footer>
+
+        <p>
+            Nome: [SEU NOME]
+        </p>
+
+        <p>
+            Matrícula: [SUA MATRÍCULA]
+        </p>
+
+        <p>
+            Data: [DATA]
+        </p>
+
+    </footer>
+
+</body>
+</html>
