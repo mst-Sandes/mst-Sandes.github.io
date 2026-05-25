@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PWEB1 — Cap. 05 — AT05 — Pesquisa Acadêmica</title>
+</head>
+<body>
+
+<header>
+    <h1>Pesquisa Acadêmica</h1>
+
+    <p>
+        <a href="../index.html">← Voltar para a página principal</a>
+    </p>
+</header>
+
+<main>
+
+<p>* Campos obrigatórios</p>
+
+<form
+    action="https://httpbin.org/post"
+    method="post"
+    novalidate
+>
+
+    <fieldset>
+        <legend>Perfil do estudante</legend>
+
+        <div>
+            <label for="nome">
+                Nome completo: <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                autocomplete="name"
+                aria-required="true"
+                required
+            />
+        </div>
+
+        <br>
+
+        <div>
+            <label for="matricula">
+                Matrícula: <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="matricula"
+                name="matricula"
+                pattern="\d{7}"
+                aria-required="true"
+                required
+                aria-describedby="info-matricula"
+            />
+
+            <small id="info-matricula">
+                Digite exatamente 7 números.
+            </small>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="email">
+                E-mail institucional:
+                <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                pattern="[a-zA-Z0-9._%+\-]+@ifal\.edu\.br"
+                aria-required="true"
+                aria-invalid="false"
+                aria-describedby="erro-email"
+                required
+                onblur="validarEmail(this)"
+            />
+
+            <p id="erro-email" role="alert"></p>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="periodo">Período atual:</label>
+
+            <select id="periodo" name="periodo">
+                <option value="1">1º período</option>
+                <option value="2">2º período</option>
+                <option value="3">3º período</option>
+                <option value="4">4º período</option>
+                <option value="5">5º período</option>
+                <option value="6">6º período</option>
+                <option value="7">7º período</option>
+                <option value="8">8º período</option>
+            </select>
+        </div>
+
+        <br>
+
+        <fieldset>
+            <legend>Turno</legend>
+
+            <input type="radio" id="manha" name="turno" value="manha" />
+            <label for="manha">Manhã</label>
+
+            <br>
+
+            <input type="radio" id="tarde" name="turno" value="tarde" />
+            <label for="tarde">Tarde</label>
+
+            <br>
+
+            <input type="radio" id="noite" name="turno" value="noite" />
+            <label for="noite">Noite</label>
+        </fieldset>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Perfil tecnológico</legend>
+
+        <fieldset>
+            <legend>Tecnologias que conhece</legend>
+
+            <input type="checkbox" id="html" name="tecnologias[]" value="html" />
+            <label for="html">HTML</label>
+
+            <br>
+
+            <input type="checkbox" id="css" name="tecnologias[]" value="css" />
+            <label for="css">CSS</label>
+
+            <br>
+
+            <input type="checkbox" id="js" name="tecnologias[]" value="js" />
+            <label for="js">JavaScript</label>
+
+            <br>
+
+            <input type="checkbox" id="python" name="tecnologias[]" value="python" />
+            <label for="python">Python</label>
+
+            <br>
+
+            <input type="checkbox" id="java" name="tecnologias[]" value="java" />
+            <label for="java">Java</label>
+
+            <br>
+
+            <input type="checkbox" id="php" name="tecnologias[]" value="php" />
+            <label for="php">PHP</label>
+
+            <br>
+
+            <input type="checkbox" id="sql" name="tecnologias[]" value="sql" />
+            <label for="sql">SQL</label>
+
+            <br>
+
+            <input type="checkbox" id="react" name="tecnologias[]" value="react" />
+            <label for="react">React</label>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <label for="linguagem">Linguagem favorita:</label>
+
+            <select id="linguagem" name="linguagem">
+
+                <optgroup label="Orientada a Objetos">
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                </optgroup>
+
+                <optgroup label="Script">
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                </optgroup>
+
+                <optgroup label="Científica">
+                    <option value="python">Python</option>
+                    <option value="r">R</option>
+                </optgroup>
+
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="experiencia">
+                Anos de experiência:
+            </label>
+
+            <input
+                type="number"
+                id="experiencia"
+                name="experiencia"
+                min="0"
+                max="30"
+            />
+        </div>
+
+        <br>
+
+        <div>
+            <label for="portfolio">
+                Portfólio ou LinkedIn:
+            </label>
+
+            <input
+                type="url"
+                id="portfolio"
+                name="portfolio"
+                placeholder="https://"
+                aria-describedby="info-link"
+            />
+
+            <small id="info-link">
+                Informe um link válido começando com https://
+            </small>
+        </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Avaliação da disciplina</legend>
+
+        <div>
+            <label for="nota">
+                Nota para a disciplina:
+                <span id="valor-nota">5</span>/10
+            </label>
+
+            <br>
+
+            <input
+                type="range"
+                id="nota"
+                name="nota"
+                min="0"
+                max="10"
+                value="5"
+                oninput="document.getElementById('valor-nota').textContent = this.value"
+            />
+        </div>
+
+        <br>
+
+        <fieldset>
+            <legend>Satisfação com o material didático</legend>
+
+            <input type="radio" id="ms" name="satisfacao" value="muito_satisfeito" />
+            <label for="ms">Muito satisfeito</label>
+
+            <br>
+
+            <input type="radio" id="s" name="satisfacao" value="satisfeito" />
+            <label for="s">Satisfeito</label>
+
+            <br>
+
+            <input type="radio" id="n" name="satisfacao" value="neutro" />
+            <label for="n">Neutro</label>
+
+            <br>
+
+            <input type="radio" id="i" name="satisfacao" value="insatisfeito" />
+            <label for="i">Insatisfeito</label>
+
+            <br>
+
+            <input type="radio" id="mi" name="satisfacao" value="muito_insatisfeito" />
+            <label for="mi">Muito insatisfeito</label>
+        </fieldset>
+
+        <br>
+
+        <div>
+            <label for="sugestoes">Sugestões de melhoria:</label>
+
+            <br>
+
+            <textarea
+                id="sugestoes"
+                name="sugestoes"
+                rows="6"
+                maxlength="1000"
+                aria-describedby="info-sugestoes"
+            ></textarea>
+
+            <br>
+
+            <small id="info-sugestoes">
+                Máximo de 1000 caracteres.
+            </small>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="data_preenchimento">
+                Data de preenchimento:
+                <span aria-hidden="true">*</span>
+            </label>
+
+            <input
+                type="date"
+                id="data_preenchimento"
+                name="data_preenchimento"
+                aria-required="true"
+                required
+            />
+        </div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Consentimento e envio</legend>
+
+        <div>
+            <input
+                type="checkbox"
+                id="consentimento"
+                name="consentimento"
+                required
+                aria-required="true"
+            />
+
+            <label for="consentimento">
+                Autorizo o uso dos dados para fins acadêmicos.
+            </label>
+        </div>
+
+        <input
+            type="hidden"
+            name="pesquisa_id"
+            value="PWEB1-2026-1"
+        />
+    </fieldset>
+
+    <br>
+
+    <button type="submit">
+        Enviar pesquisa
+    </button>
+
+    <button type="reset">
+        Limpar formulário
+    </button>
+
+</form>
+
+<script>
+    function validarEmail(campo) {
+
+        const erro = document.getElementById('erro-email');
+
+        if (!campo.value.endsWith('@ifal.edu.br')) {
+
+            erro.textContent =
+                'Informe seu e-mail institucional (@ifal.edu.br)';
+
+            campo.setAttribute('aria-invalid', 'true');
+
+        } else {
+
+            erro.textContent = '';
+
+            campo.setAttribute('aria-invalid', 'false');
+        }
+    }
+
+    document.getElementById('data_preenchimento').max =
+        new Date().toISOString().split('T')[0];
+</script>
+
+</main>
+
+</body>
+</html>
