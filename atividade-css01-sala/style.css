@@ -1,0 +1,48 @@
+#topo {
+margin-bottom: 50px;
+background-color: lime;
+text-align: center;
+border: 1px solid black;
+border-radius: 10px;
+padding: 5px;
+font-family: Arial, sans-serif;
+}
+
+#selecao {
+color: white;
+margin: 0 auto;
+width: 99%;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: green;
+text-align: center;
+}
+
+#fim {
+background-color: white;
+border: 1px solid black;
+border-radius: 10px;
+padding: 5px;
+margin: 0 auto;
+width: 80%;
+}
+
+#button {
+color: lime;
+background-color: green;
+}
+
+footer {
+color: white;
+}
+
+#final {
+background-color: lime;
+border: 1px solid black;
+border-radius: 10px;
+padding: 10px;
+margin: 0 auto;
+width: 30%;
+}
