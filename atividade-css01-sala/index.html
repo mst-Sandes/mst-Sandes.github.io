@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscrição em Curso</title>
+</head>
+<body>
+<div id="topo">
+    <h4>Este é um trabalho sobre a criação de uma página de formulário.</h4>
+    <h4>O tema é: Inscrição em curso.</h4>
+</div>
+
+<div id="final">
+
+    <div id="selecao">
+        <h1>Seleção de cursos para IF</h1>
+
+        <p id="subselecao">
+            Preencha as informações abaixo para completar a inscrição.
+        </p>
+    </div>
+
+    <form id="fim">
+
+        <div class="campo">
+            <label for="nome">Nome</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <label for="password">Senha</label><br>
+            <input type="password" id="password" name="senha" placeholder="Digite a senha" required>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <label for="date">Nascimento</label><br>
+            <input type="date" id="date" name="nascimento" required>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <label for="curso">Curso</label><br>
+
+            <select id="curso" name="curso" required>
+                <option>Informática</option>
+                <option>Química</option>
+                <option>Edificações</option>
+                <option>Mecânica</option>
+                <option>Eletrônica</option>
+                <option>Eletrotécnica</option>
+                <option>Estradas</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <p>Turno:</p>
+
+            <input type="radio" id="matutino" name="escolha" value="Matutino" required>
+            <label for="matutino">Matutino</label>
+
+            <input type="radio" id="vespertino" name="escolha" value="Vespertino">
+            <label for="vespertino">Vespertino</label>
+        </div>
+
+        <br>
+
+        <div class="campo">
+            <input type="checkbox" id="termos" required>
+            <label for="termos">Aceito os termos</label>
+        </div>
+        <br>
+
+        <button id="button" type="submit">
+            Enviar
+        </button>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>
+        Integrantes: Miguel Sandes e Luan Edgar<br>
+        Disciplina: Programação Web<br>
+        Data: 02/06/26
+    </p>
+</footer>
+
+</body>
+
+</html>
