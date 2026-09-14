@@ -1,224 +1,95 @@
 <!DOCTYPE html>
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-
-        body {
-            line-height: 1.8;
-            font-size: 22px;
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px;
-            text-align: center;
-        }
-
-        a {
-            color: darkgreen;
-            font-size: 24px;
-        }
-
-        #explicando {
-            color: lime;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-
-        #ifal {
-            color: lime;
-        }
-
-        #escola {
-            color: green;
-            margin-top: 50px;
-            margin-bottom: 30px;
-        }
-
-        #conhecendo {
-            font-size: 26px;
-            margin-bottom: 20px;
-        }
-
-        #biografia {
-            margin-top: 30px;
-            margin-bottom: 45px;
-            font-size: 24px;
-        }
-
-        ul {
-            font-size: 24px;
-            margin-bottom: 35px;
-            list-style-position: inside;
-        }
-
-        h1 {
-            margin-bottom: 25px;
-            font-size: 42px;
-        }
-
-        h2 {
-            color: purple;
-            margin-bottom: 30px;
-            font-size: 32px;
-        }
-
-        h3 {
-            margin-top: 25px;
-            margin-bottom: 35px;
-            font-size: 28px;
-        }
-
-        img {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            border-radius: 15px;
-        }
-
-        footer {
-            margin-top: 60px;
-        }
-
-        footer ul {
-            list-style-type: square;
-        }
-
-    </style>
-
-    <title>
-        Meu currículo.
-    </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Miguel sandes</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
+  <div class="pagina">
 
-    <h1>
-        Miguel Sandes Tenório
-    </h1>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>Miguel Sandes Tenório</h1>
+      <p>Estudante de Desenvolvimento de Sistemas · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-    <h2>
-        921-C
-    </h2>
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>Prazer! Eu me chamo Sandes. Atualmente estou cursando desenvolvimento de sistemas integrado ao ensino médio e tenho grande interesse na área de criação de sites com <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b><em></em>.</p>
+      </section>
 
-    <img src="minhafoto.jpeg"
-    alt="Foto retrato de Miguel Sandes Tenório"
-    width="400">
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Primeira Página pessoal</h3>
+            <p>Foi um prototipo de uma pagina pessoal como esta, porem utilizando HTML e CSS básicos.</p>
+          </article>
+          <article class="projeto">
+            <h3>Página de inscrição em dupla</h3>
+            <p>Foi trabalho realizado em dupla com o intuito de aprendermos a utilizar o <b>border</b> e o <b>padding</b>.</p>
+          </article>
+          <article class="projeto">
+            <h3>Treino de Proporções</h3>
+            <p>Foi uma atividade dedicada à pratica de codigos de proporção para melhorar a experiência dos possiveis leitores da página.</p>
+          </article>
+        </div>
+      </section>
+    </main>
 
-    <h3>
-        <br/>Data de nascimento:<br/>24/10/2010
-    </h3>
-
-    <p id="biografia">
-        Eu sou <b>Sandes</b>, não sou o tipo de pessoa que <i>caça briga</i>, mas acho discussões e debates bem<br/> interessantes. Eu <ins>gosto</ins> de ficar com a minha família e amigos, mas também gosto de aproveitar<br/> algum tempo sozinho na minha <b>solitude</b>. Meus <ins>hobbies</ins> incluem: <mark>Jogar, conversar em ligação,<br/> assistir a shows de tv e ouvir música.</mark> Tenho também grande <ins>interesse</ins> no mundo da <b>programação<br/></b> e dos <b>investimentos</b>, assim como na <b>psicologia social</b>.
-    </p>
-
-    <p>
-        <b>Conhecimentos nos quais estou atualmente me aprofundando:</b>
-    </p>
-
-    <ul>
-        <li>Fundamentos da Informática</li>
-        <li>Programação web</li>
-        <li>Introdução à programação</li>
-    </ul>
-
-    <h1 id="escola">
-        Onde eu estudo: Conheça a minha escola!
-    </h1>
-
-    <ul id="conhecendo">
-        <li id="ifal">
-            <b>O que é o <ins>IFAL</ins>?</b>
-        </li>
-    </ul>
-
-    <p id="explicando">
-        O <ins>IFAL</ins> (Instituto Federal de Alagoas) é uma instituição pública de educação profissional, científica<br/> e tecnológica, reconhecida por oferecer ensino gratuito de qualidade. Ele engloba cursos técnicos<br/> (integrados ou subsequentes ao ensino médio), superiores, pós-graduações e pesquisa. É<br/> considerado referência no estado. <br/> <br/> Para mais informações, segue o link do site <b>oficial</b> do <ins>IFAL</ins>:
-    </p>
-
-    <a href="http://www.ifal.edu.br">
-        Domínio oficial do IFAL.
-    </a>
-
-    <footer>
-
-        <h1>
-            Minhas atividades
-        </h1>
-
-        <ul>
-
-            <li>
-                <a href="cap04/at01.html">
-                    Atividade 1 cap 4
-                </a>
-            </li>
-
-            <li>
-                <a href="Atividade2.html">
-                    Atividade 2 cap 4
-                </a>
-            </li>
-
-            <li>
-                <a href="atividade3.html">
-                    Atividade 3 cap 4
-                </a>
-            </li>
-
-            <li>
-                <a href="atividade4.html">
-                    Atividade 4 cap 4
-                </a>
-            </li>
-
-
-            <li>
-                <a href="cap5/at1.html">
-                    Atividade 1 cap 5
-                </a>
-            </li>
-
-            <li>
-                <a href="cap5/at2.html">
-                    Atividade 2 cap 5
-                </a>
-            </li>
-
-            <li>
-                <a href="cap5/at3.html">
-                    Atividade 3 cap 5
-                </a>
-            </li>
-
-            <li>
-                <a href="cap5/at4.html">
-                    Atividade 4 cap 5
-                </a>
-            </li>
-            <li>
-                <a href="cap5/at5.html">
-                    Atividade 5 cap 5
-                </a>
-            </li>
-
-            <li>               
-                <a href="atividade-css01-sala/index.html">
-                    Atividade em sala com css 1
-                </a>
-            </li>
-                        <li>               
-                <a href="atividade-css02-sala/index02.html">
-                    Atividade em sala com css 2
-                </a>
-            </li>
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
         </ul>
-    </footer>
+      </section>
 
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="mailto:mst9@aluno.ifal.edu.br">mst9@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/mst-Sandes">github.com/mst-Sandes</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 Miguel Sandes Tenório · feito com HTML + CSS Grid</footer>
+
+  </div>
 </body>
 
 </html>
